@@ -1,7 +1,7 @@
-# springboot-dubbox
+# platform-parent
 基于spring-boot dubbox搭建的java分布式系统
 - 前后端分离
-- 前端管理项目 https://github.com/zhangxd1989/springboot-dubbox-web
+- 前端管理项目
 - spring-security基于角色的权限管理
 - 统一异常管理
 - spring-data-redis整合
@@ -18,8 +18,6 @@
 - 接口访问次数限制
 - okhttp3第三方接口调用
 - druid sql监控
-
----
 
 - 项目依赖Mysql、Zookeeper、Redis
 - platform-admin-web为管理平台接口
