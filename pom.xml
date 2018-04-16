@@ -26,22 +26,6 @@
         <relativePath/>
     </parent>
 
-<!--    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus.tonglvhuanqiu.com/repository/maven-public/</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus.tonglvhuanqiu.com/repository/maven-public/</url>
-        </pluginRepository>
-    </pluginRepositories>-->
-
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
