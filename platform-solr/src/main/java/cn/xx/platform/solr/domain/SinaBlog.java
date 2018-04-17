@@ -1,12 +1,20 @@
 package cn.xx.platform.solr.domain;/**
  * Created by Administrator on 2018/4/17.
  */
+
+import javax.persistence.*;
+
 /**
  * SinaBlogPipeLine 专用
  */
+@Entity
+@Table(name = "sina_blog")
 public class SinaBlog {
+    @Id
+    @GeneratedValue
     private Long id;
     private String title;
+    @Lob
     private String content;
     private String date;
 

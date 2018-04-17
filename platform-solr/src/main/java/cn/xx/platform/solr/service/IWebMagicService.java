@@ -16,4 +16,7 @@ public interface IWebMagicService {
      * @param sinaBlog
      */
     void save(SinaBlog sinaBlog);
+
+
+
 }

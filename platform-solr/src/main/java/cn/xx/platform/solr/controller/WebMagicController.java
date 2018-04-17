@@ -1,21 +1,41 @@
 package cn.xx.platform.solr.controller;
 
-import org.apache.solr.client.solrj.SolrClient;
-import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.common.SolrDocument;
+import cn.xx.platform.solr.domain.SinaBlog;
+import cn.xx.platform.solr.service.IWebMagicService;
+import cn.xx.platform.solr.service.impl.WebMagicServiceImpl;
+import cn.xx.platform.solr.webmagic.pipeline.SinaBlogPipeLine;
+import cn.xx.platform.solr.webmagic.processor.SinaBlogProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import us.codecraft.webmagic.Spider;
 
-import java.io.IOException;
-
+@Controller
+@RequestMapping("/webmagic")
 public class WebMagicController {
     @Autowired
-    private SolrClient client;
+    private IWebMagicService webMagicService;
+    @Autowired
+    private SinaBlogPipeLine sinaBlogPipeLine;
 
-    @RequestMapping("/")
-    public String testSolr() throws IOException, SolrServerException {
-        SolrDocument document = client.getById("test", "fe7a5124-d75b-40b2-93fe-5555512ea6d2");
-        System.out.println(document);
-        return document.toString();
+    @RequestMapping("/test")
+    public String test(){
+      return "test";
+    }
+    @RequestMapping("/testSaveData")
+    @ResponseBody
+    public String testSaveData(){
+        SinaBlog sinaBlog=new SinaBlog();
+        sinaBlog.setTitle("test");
+        webMagicService.save(sinaBlog);
+        return "successs";
+    }
+
+    @RequestMapping("/sina")
+    @ResponseBody
+    public String sina(){
+        Spider.create(new SinaBlogProcessor()).addUrl("http://blog.sina.com.cn/s/articlelist_1487828712_0_1.html").addPipeline(sinaBlogPipeLine).thread(5).run();
+        return "successs";
     }
 }

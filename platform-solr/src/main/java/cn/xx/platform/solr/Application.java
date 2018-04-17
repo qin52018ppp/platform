@@ -1,6 +1,7 @@
 package cn.xx.platform.solr;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -9,9 +10,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  *
  */
 // Spring Boot 应用的标识
-//等同于 @Configuration @EnableAutoConfiguration @ComponentScanpublic
 @EnableScheduling
+//等同于 @Configuration @EnableAutoConfiguration @ComponentScanpublic
 @SpringBootApplication
+//@EnableAutoConfiguration
 public class Application {
 
     public static void main(String[] args) {
