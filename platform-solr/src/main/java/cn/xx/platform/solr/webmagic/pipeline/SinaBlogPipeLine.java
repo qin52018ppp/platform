@@ -32,15 +32,14 @@ public class SinaBlogPipeLine implements Pipeline {
             for (Map.Entry<String, Object> entry : items.entrySet()) {
                 String key = entry.getKey();
                 Object value = entry.getValue();
-                if(key.equals("title")){
+                if (key.equals("title")) {
                     sinaBlog.setTitle(value.toString());
-                }else if(key.equals("content")){
+                } else if (key.equals("content")) {
                     sinaBlog.setContent(value.toString());
-                }else if(key.equals("date")){
+                } else if (key.equals("date")) {
                     sinaBlog.setDate(value.toString());
                 }
             }
-
             webMagicService.save(sinaBlog);
         } catch (Exception e) {
             e.printStackTrace();
