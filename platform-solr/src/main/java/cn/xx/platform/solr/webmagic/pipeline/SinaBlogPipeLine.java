@@ -40,6 +40,7 @@ public class SinaBlogPipeLine implements Pipeline {
                     sinaBlog.setDate(value.toString());
                 }
             }
+
             webMagicService.save(sinaBlog);
         } catch (Exception e) {
             e.printStackTrace();

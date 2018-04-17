@@ -27,8 +27,8 @@ public class SinaBlogProcessor implements PageProcessor {
             page.addTargetRequests(page.getHtml().xpath("//div[@class=\"articleList\"]").links().regex(URL_POST).all());
             page.addTargetRequests(page.getHtml().links().regex(URL_LIST).all());
         } else {
-            //文章页
-            page.putField("title",page.getHtml().xpath("//div[@class='articalTitle']/h2"));
+            //文章页text()  意味着text()
+            page.putField("title",page.getHtml().xpath("//div[@class='articalTitle']/h2/text()"));
             page.putField("content", page.getHtml().xpath("//div[@id='articlebody']//div[@class='articalContent']"));
             page.putField("date", page.getHtml().xpath("//div[@id='articlebody']//span[@class='time SG_txtc']").regex("\\((.*)\\)"));
         }

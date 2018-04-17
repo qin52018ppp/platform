@@ -10,7 +10,7 @@ import org.springframework.data.solr.core.SolrTemplate;
 import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 
 @Configuration
-@EnableSolrRepositories(basePackages = { "com.solr" }, multicoreSupport = true)
+@EnableSolrRepositories("cn.xx.platform.solr")
 public class SolrConfig {
 
 	@Value("${spring.data.solr.host}")
@@ -22,13 +22,7 @@ public class SolrConfig {
 	}
 
 	@Bean
-	public SolrTemplate solrTemplate() throws Exception {
-		SolrTemplate solrTemplate =  new SolrTemplate(solrClient());
-//		solrTemplate.setSolrConverter(solrConverter);
-		return solrTemplate;
+	public SolrTemplate solrTemplate(SolrClient solrClient) throws Exception {
+		return new SolrTemplate(solrClient);
 	}
-	
-
-
-
 }

@@ -18,11 +18,11 @@ import us.codecraft.webmagic.Spider;
 public class SinaBlogScheduled {
     private static final Logger LOGGER= LoggerFactory.getLogger(SinaBlogScheduled.class);
 //    fixRate和fixDelay参数都指定了函数每隔某个毫秒数执行一次，但是他们之间也有细小的差别。fixRate的计时是相对于系统时间的，也就是一定相隔会固定时间执行。
-    /*@Scheduled(fixedDelay = 10000L)
+    @Scheduled(fixedDelay = 10000L)
     public void hello() {
         LOGGER.debug("=================hello world==========");
     }
-
+    /*
     @Scheduled(fixedDelay = 10000L)
     public void send() {
         Spider.create(new SinaBlogProcessor())

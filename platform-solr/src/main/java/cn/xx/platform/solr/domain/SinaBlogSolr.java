@@ -9,15 +9,14 @@ import javax.persistence.*;
 /**
  * SinaBlogPipeLine 专用
  */
-@Entity
-@Table(name = "sina_blog")
-public class SinaBlog {
-    @Id
-    @GeneratedValue
+public class SinaBlogSolr {
+    @Field
     private Long id;
+    @Field
     private String title;
-    @Lob
+    @Field
     private String content;
+    @Field
     private String date;
     public Long getId() {
         return id;
