@@ -3,12 +3,14 @@ package cn.xx.platform.solr.domain;/**
  */
 
 import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import javax.persistence.*;
 
 /**
  * SinaBlogPipeLine 专用
  */
+@SolrDocument(solrCoreName="sinablog")
 public class SinaBlogSolr {
     @Field
     private Long id;

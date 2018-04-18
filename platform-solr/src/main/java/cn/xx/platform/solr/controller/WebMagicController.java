@@ -4,8 +4,9 @@ import cn.xx.platform.solr.webmagic.pipeline.SinaBlogPipeLine;
 import cn.xx.platform.solr.webmagic.processor.SinaBlogProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import us.codecraft.webmagic.Spider;
-
+@RestController
 @RequestMapping("/webmagic")
 public class WebMagicController {
 /*    @Autowired

@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableScheduling
 //等同于 @Configuration @EnableAutoConfiguration @ComponentScanpublic
 @SpringBootApplication
-@RestController
 public class Application {
 
     public static void main(String[] args) {
