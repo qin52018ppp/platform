@@ -14,6 +14,8 @@
         <module>platform-mobile-client</module>
         <module>platform-solr</module>
         <module>platform-elasticsearch</module>
+        <!--  内容生成器  -->
+        <module>platform-generate</module>
     </modules>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
