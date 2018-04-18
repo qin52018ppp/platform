@@ -10,7 +10,7 @@ import org.springframework.data.solr.core.SolrTemplate;
 import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 
 @Configuration
-@EnableSolrRepositories("cn.xx.platform.solr")
+@EnableSolrRepositories(basePackages = {"cn.xx.platform.solr"})
 public class SolrConfig {
 
 	@Value("${spring.data.solr.host}")

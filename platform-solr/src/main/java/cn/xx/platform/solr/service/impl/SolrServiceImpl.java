@@ -39,9 +39,8 @@ public class SolrServiceImpl implements ISolrService {
             BeanUtils.copyProperties(sinaBlog, sinaBlogSlor);
             try {
                 SinaBlogSolr s=sinaBlogSolrRepository.save(sinaBlogSlor);
-                LOGGER.info("sucess");
             } catch (Exception e) {
-                LOGGER.error(e.getMessage());
+               e.printStackTrace();
             }
         }
     }
