@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @Company:新概念保险
+ * @Company:col-md-1
  * @Auth:秦盼（Q）
  * @Description:秦盼（Q）
  * @Date:Created in 17:17 2018/4/18

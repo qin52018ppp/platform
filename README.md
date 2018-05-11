@@ -26,7 +26,7 @@
 - platform-mobile-client为移动客户端接口
 - platform-system为服务提供者
 - platform-solr提供全文搜索的列子(配置solr服务（默认使用jetty部署）https://blog.csdn.net/pan_cras/article/details/52369505)https://blog.csdn.net/qq_28114645/article/details/77961998
-
+-- platform-test提供测试学习的项目
 - platform-generate内容生成器,一般的实验项目
 - 在application.yml中配置数据库连接、Redis连接及web访问端口
 - 执行db-script中的数据库初始化脚本
@@ -37,6 +37,7 @@ http://localhost:8085/druid/  阿里的数据源
 
 
 ---  本项目主要思路搭建自己的框架，进入快速开发准备的
+
 
 
 
