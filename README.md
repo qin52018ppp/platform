@@ -27,7 +27,7 @@
 - platform-system为服务提供者
 - platform-solr提供全文搜索的列子(配置solr服务（默认使用jetty部署）https://blog.csdn.net/pan_cras/article/details/52369505)https://blog.csdn.net/qq_28114645/article/details/77961998
 
-- platform-generate内容生成器
+- platform-generate内容生成器,一般的实验项目
 - 在application.yml中配置数据库连接、Redis连接及web访问端口
 - 执行db-script中的数据库初始化脚本
 - 在pom.xml中配置zookeeper连接地址
