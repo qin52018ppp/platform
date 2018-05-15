@@ -11,5 +11,11 @@
 
     <artifactId>platform-test</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>cn.xx</groupId>
+            <artifactId>platform-common-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -2,6 +2,8 @@ package cn.xx.platform;/**
  * Created by Administrator on 2018/5/11.
  */
 
+import cn.xx.platform.io.DirectoryReadFile;
+
 /**
  * @Company:col-md-1
  * @Auth:秦盼（Q）
@@ -11,6 +13,6 @@ package cn.xx.platform;/**
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("hello world");
+        DirectoryReadFile.readfile("F:\\bao_core_eclipse_2017_09\\InsuranceProduct\\InsuranceProduct_web\\src\\main\\webapp\\WEB-INF\\view\\product");
     }
 }

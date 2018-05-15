@@ -30,7 +30,7 @@ public final class WebUtils {
      * 文件类型转换
      *
      * @param file MultipartFile
-     * @return File file
+     * @return File io
      */
     public static File transfer(MultipartFile file) {
         File upFile = new File(new File(TEMP_FILE_PATH), file.getOriginalFilename());
@@ -47,7 +47,7 @@ public final class WebUtils {
      *
      * @param file   MultipartFile
      * @param folder 文件路径
-     * @return FileIndex file index
+     * @return FileIndex io index
      */
     public static FileIndex buildFileIndex(MultipartFile file, String folder) {
         return new FileIndex(transfer(file), file.getOriginalFilename(), folder);

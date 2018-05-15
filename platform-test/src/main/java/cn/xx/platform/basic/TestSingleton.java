@@ -1,4 +1,4 @@
-package cn.xx.platform.study;/**
+package cn.xx.platform.basic;/**
  * Created by Administrator on 2018/5/11.
  */
 
@@ -12,7 +12,7 @@ package cn.xx.platform.study;/**
 class Singleton {
     private static Singleton singleton = new Singleton();
     public static int counter1;
-    public static int counter2 = 0;
+    public static int counter2 = 0;//此处准备阶段会赋值给
     private Singleton() {
         counter1++;
         counter2++;

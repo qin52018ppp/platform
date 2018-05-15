@@ -16,9 +16,9 @@ import org.springframework.context.annotation.Configuration;
 public class UploadConfig {
 
     /**
-     * Oss file operator oss file operator.
+     * Oss io operator oss io operator.
      *
-     * @return the oss file operator
+     * @return the oss io operator
      */
     @Bean
     @ConfigurationProperties("upload")
@@ -27,10 +27,10 @@ public class UploadConfig {
     }
 
     /**
-     * File manager file manager.
+     * File manager io manager.
      *
-     * @param fileOperator the file operator
-     * @return the file manager
+     * @param fileOperator the io operator
+     * @return the io manager
      */
     @Bean
     public FileManager fileManager(FileOperator fileOperator) {
