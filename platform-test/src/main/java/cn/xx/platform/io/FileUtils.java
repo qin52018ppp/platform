@@ -1,12 +1,12 @@
-package cn.xx.platform.io.bigfile;/**
+package cn.xx.platform.io;/**
  * Created by Administrator on 2018/3/21.
  */
 
+import cn.xx.platform.io.bigfile.BigFileReader;
+import cn.xx.platform.io.bigfile.IFinishHandle;
+import cn.xx.platform.io.bigfile.IHandle;
+
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -87,9 +87,5 @@ public final class FileUtils {
                 e.printStackTrace();
             }
         }
-    }
-
-    public static void main(String[] args) {
-        FileUtils.read("C:\\Users\\Administrator\\Desktop\\Noname3.txt");
     }
 }
