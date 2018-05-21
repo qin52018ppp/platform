@@ -103,6 +103,9 @@ class MySingleton5 {
     }
 }
 
+/**
+ * 枚举模式
+ */
 enum SingletonPartten {
     INSTANCE;
 
